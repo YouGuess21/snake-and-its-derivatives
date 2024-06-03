@@ -183,10 +183,10 @@ class MAIN:
                     pygame.draw.rect(screen, grass_color, grass_rect)
 
     def draw_obstacles(self):
-        obstacle_color = (139, 69, 19)
         for obstacle in self.obstacles:
             obstacle_rect = pygame.Rect(obstacle.x * cell_size, obstacle.y * cell_size, cell_size, cell_size)
-            pygame.draw.rect(screen, obstacle_color, obstacle_rect)
+            screen.blit(waste, obstacle_rect)
+
 
     def draw_score(self):
         score_text = str(len(self.snake.body) - 1)
@@ -205,6 +205,7 @@ screen = pygame.display.set_mode((cell_number*cell_size, cell_number*cell_size))
 
 clock = pygame.time.Clock()
 apple = pygame.image.load('graphics/apple.png').convert_alpha()
+waste = pygame.image.load('graphics/raido.png').convert_alpha()
 game_font = pygame.font.Font('./font/PoetsenOne-Regular.ttf', 25)
 
 SCREEN_UPDATE = pygame.USEREVENT

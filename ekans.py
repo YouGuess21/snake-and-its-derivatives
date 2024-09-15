@@ -205,7 +205,7 @@ screen = pygame.display.set_mode((cell_number*cell_size, cell_number*cell_size))
 
 clock = pygame.time.Clock()
 apple = pygame.image.load('graphics/apple.png').convert_alpha()
-waste = pygame.image.load('graphics/raido.png').convert_alpha()
+waste = pygame.image.load('graphics/radio.png').convert_alpha()
 game_font = pygame.font.Font('./font/PoetsenOne-Regular.ttf', 25)
 
 SCREEN_UPDATE = pygame.USEREVENT
